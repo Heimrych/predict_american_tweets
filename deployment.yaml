@@ -15,7 +15,7 @@ spec:
         app: henriquefagundes-american-predictor
     spec:
       containers:
-      - name: predict_american_tweets
+      - name: predict-american-tweets
         image: predict_american_tweets:0.1
         ports:
         - containerPort: 5013
