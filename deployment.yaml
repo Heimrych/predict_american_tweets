@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: predict-american-tweets
-        image: predict_american_tweets:0.1
+        image: henriquef/predict_american_tweets:0.1
         ports:
         - containerPort: 5013
