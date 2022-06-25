@@ -19,5 +19,6 @@ def return_prediction():
     prediction = app.model.predict([text])
     american = "American" if prediction[0] else "Not American"
     return jsonify(
+        version_number="0.2",
         prediction=american
     )
