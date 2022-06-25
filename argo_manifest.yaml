@@ -1,0 +1,174 @@
+metadata:
+  creationTimestamp: "2022-06-25T22:28:42Z"
+  generation: 29
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:destination:
+          .: {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:source:
+          .: {}
+          f:path: {}
+          f:repoURL: {}
+        f:syncPolicy:
+          .: {}
+          f:automated: {}
+      f:status:
+        .: {}
+        f:health:
+          .: {}
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          .: {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            .: {}
+            f:initiatedBy:
+              .: {}
+              f:automated: {}
+            f:retry:
+              .: {}
+              f:limit: {}
+            f:sync:
+              .: {}
+              f:revision: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            .: {}
+            f:resources: {}
+            f:revision: {}
+            f:source:
+              .: {}
+              f:path: {}
+              f:repoURL: {}
+        f:reconciledAt: {}
+        f:resources: {}
+        f:sourceType: {}
+        f:summary:
+          .: {}
+          f:images: {}
+        f:sync:
+          .: {}
+          f:comparedTo:
+            .: {}
+            f:destination:
+              .: {}
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              .: {}
+              f:path: {}
+              f:repoURL: {}
+          f:revision: {}
+          f:status: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2022-06-25T22:38:24Z"
+  name: henriquefagundes-american-predictor
+  namespace: argocd
+  resourceVersion: "3509893"
+  uid: d4f5a5a0-2a98-4f87-bdee-3f64a0976bfd
+spec:
+  destination:
+    namespace: henriquefagundes
+    server: https://kubernetes.default.svc
+  project: henriquefagundes-project
+  source:
+    path: .
+    repoURL: https://github.com/Heimrych/predict_american_tweets
+  syncPolicy:
+    automated: {}
+status:
+  health:
+    status: Healthy
+  history:
+  - deployStartedAt: "2022-06-25T22:28:42Z"
+    deployedAt: "2022-06-25T22:28:43Z"
+    id: 0
+    revision: 9444469506bb40880745ac35c6f2230f66064efa
+    source:
+      path: .
+      repoURL: https://github.com/Heimrych/predict_american_tweets
+  - deployStartedAt: "2022-06-25T22:38:19Z"
+    deployedAt: "2022-06-25T22:38:23Z"
+    id: 1
+    revision: 61335971a3c07727789d55fd2f3e960f479aafef
+    source:
+      path: .
+      repoURL: https://github.com/Heimrych/predict_american_tweets
+  operationState:
+    finishedAt: "2022-06-25T22:38:24Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        revision: 61335971a3c07727789d55fd2f3e960f479aafef
+    phase: Succeeded
+    startedAt: "2022-06-25T22:38:19Z"
+    syncResult:
+      resources:
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/henriquefagundes-american-predictor unchanged
+        name: henriquefagundes-american-predictor
+        namespace: henriquefagundes
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        kind: Deployment
+        message: deployment.apps/henriquefagundes-american-predictor configured
+        name: henriquefagundes-american-predictor
+        namespace: henriquefagundes
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: 61335971a3c07727789d55fd2f3e960f479aafef
+      source:
+        path: .
+        repoURL: https://github.com/Heimrych/predict_american_tweets
+  reconciledAt: "2022-06-25T22:38:24Z"
+  resources:
+  - health:
+      status: Healthy
+    kind: Service
+    name: henriquefagundes-american-predictor
+    namespace: henriquefagundes
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: henriquefagundes-american-predictor
+    namespace: henriquefagundes
+    status: Synced
+    version: v1
+  sourceType: Directory
+  summary:
+    images:
+    - henriquef/predict_american_tweets:0.2
+  sync:
+    comparedTo:
+      destination:
+        namespace: henriquefagundes
+        server: https://kubernetes.default.svc
+      source:
+        path: .
+        repoURL: https://github.com/Heimrych/predict_american_tweets
+    revision: 61335971a3c07727789d55fd2f3e960f479aafef
+    status: Synced
