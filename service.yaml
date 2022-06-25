@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: henriquefagundes-american-predictor
+spec:
+  selector:
+    app: henriquefagundes-american-predictor
+  ports:
+    - protocol: TCP
+      port: 5013
+      targetPort: 5013

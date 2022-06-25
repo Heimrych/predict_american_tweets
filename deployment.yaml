@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: henriquefagundes-american-predictor
+  labels:
+    app: henriquefagundes-american-predictor
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: henriquefagundes-american-predictor
+  template:
+    metadata:
+      labels:
+        app: henriquefagundes-american-predictor
+    spec:
+      containers:
+      - name: predict_american_tweets
+        image: predict_american_tweets:0.1
+        ports:
+        - containerPort: 5013
