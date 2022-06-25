@@ -5,7 +5,7 @@ metadata:
   labels:
     app: henriquefagundes-american-predictor
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: henriquefagundes-american-predictor
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: predict-american-tweets
-        image: henriquef/predict_american_tweets:0.1
+        image: henriquef/predict_american_tweets:0.2
         ports:
         - containerPort: 5013
