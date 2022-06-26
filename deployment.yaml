@@ -5,7 +5,7 @@ metadata:
   labels:
     app: henriquefagundes-american-predictor
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: henriquefagundes-american-predictor
